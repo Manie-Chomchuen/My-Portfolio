@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manie Q. Chomchuen — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="loadingScreen" class="loading-screen" aria-hidden="false">
+    <div class="loading-box" role="status" aria-live="polite" aria-label="Welcome">
+      <div class="typing-wrap">
+        <h1 id="welcomeMain" class="welcome-main" aria-hidden="true"></h1>
+        <p id="welcomeSub" class="welcome-sub" aria-hidden="true"></p>
+      </div>
+      <div id="fillOverlay" class="fill-overlay" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div id="site" class="site hidden" aria-hidden="true">
+
+    <header class="hero" role="banner">
+      <div class="hero-inner">
+        <div class="hero-left" id="heroLeft" tabindex="0">
+          <h2 class="hero-intro"><span id="heroText">Hi — I'm Manie!</span><span class="caret" aria-hidden="true">|</span></h2>
+          <p class="hero-desc">Computer Science Student and Aspiring AI Engineer</p>
+          <button class="btn primary" id="toAbout">Learn more ↓</button>
+        </div>
+        <div class="hero-right">
+          <img src="Icon_picture.jpg" alt="Manie Q. Chomchuen" class="profile" id="profile" tabindex="0">
+        </div>
+      </div>
+    </header>
+
+    <div class="divider-band" aria-hidden="true"></div>
+
+    <main>
+      <section class="section about-wrap">
+        <h3 class="section-title">About Me</h3>
+        <div class="about-card hoverable" id="aboutCard" tabindex="0" aria-labelledby="aboutTitle">
+          <h4 id="aboutTitle" class="sr-only">About Me</h4>
+          <p class="about-text">
+            Hi! My name is <strong>Manie Q. Chomchuen</strong>. I’m a first-year Computer Science student at Manuel S.
+            Enverga University Foundation with a growing passion for coding, tinkering, and designing tools that make everyday
+            tasks simpler and more efficient.
+          </p>
+          <p class="about-text">
+            I aspire to become an AI Engineer focused on developing AI detection and protective systems that help safeguard
+            individuals and communities from misinformation, cyberattacks, and emerging digital threats. I’m driven by curiosity,
+            purpose, and the belief that technology should make people feel safer, not overwhelmed.
+          </p>
+        </div>
+      </section>
+
+      <section class="section education-wrap" aria-labelledby="eduHeading">
+        <h3 id="eduHeading" class="section-title">Education</h3>
+
+        <div class="edu-controls-top">
+          <div class="edu-nav" role="tablist" aria-label="Education Tabs" id="eduTabs">
+            <button class="edu-tab" role="tab" aria-selected="true" data-index="0">Elementary</button>
+            <button class="edu-tab" role="tab" aria-selected="false" data-index="1">Junior High</button>
+            <button class="edu-tab" role="tab" aria-selected="false" data-index="2">Senior High</button>
+            <button class="edu-tab" role="tab" aria-selected="false" data-index="3">College</button>
+          </div>
+
+          <div class="edu-nav-buttons" aria-hidden="false">
+            <button id="eduPrev" class="nav-btn" aria-label="Previous education">◀</button>
+            <button id="eduNext" class="nav-btn" aria-label="Next education">▶</button>
+          </div>
+        </div>
+
+        <div class="edu-stage" id="eduStage" aria-live="polite">
+          <article class="edu-slide active" data-index="0" role="tabpanel">
+            <div class="edu-text">
+              <h4>Adamson University (Elementary)</h4>
+              <p><strong>Years:</strong> Graduated in 2019 — Graduated with Honors and an early interest in technology.</p>
+            </div>
+            <div class="edu-image">
+              <img src="Elementary_logo.png" alt="Adamson University logo">
+            </div>
+          </article>
+
+          <article class="edu-slide" data-index="1" role="tabpanel" aria-hidden="true">
+            <div class="edu-text">
+              <h4>Luis Palad Integrated High School (Junior High)</h4>
+              <p><strong>Years:</strong> Graduated in 2023 — Graduated with High Honors; participated in several school-level competitions which helped build confidence and practical skills.</p>
+            </div>
+            <div class="edu-image">
+              <img src="Junior_logo.jpeg" alt="Luis Palad Junior High logo">
+            </div>
+          </article>
+
+          <article class="edu-slide" data-index="2" role="tabpanel" aria-hidden="true">
+            <div class="edu-text">
+              <h4>Luis Palad Integrated High School (Senior High)</h4>
+              <p><strong>Years:</strong> Graduated in 2025 — Graduated with High Honors in the STEM strand; developed a passion for software and AI systems.</p>
+            </div>
+            <div class="edu-image">
+              <img src="Junior_logo.jpeg" alt="Luis Palad Senior High logo">
+            </div>
+          </article>
+
+          <article class="edu-slide" data-index="3" role="tabpanel" aria-hidden="true">
+            <div class="edu-text">
+              <h4>Manuel S. Enverga University Foundation (College)</h4>
+              <p><strong>Years:</strong> 2025–Present — Currently taking Bachelor of Science in Computer Science (BSCS) at Manuel S. Enverga University Foundation.</p>
+            </div>
+            <div class="edu-image">
+              <img src="College_logo.png" alt="Manuel S. Enverga University Foundation logo">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-wrap" aria-labelledby="skillsHeading">
+        <div class="skills-tab-row">
+          <div role="tablist" aria-label="Skills categories" class="skills-tabs">
+            <button id="tabTech" class="skills-tab active" role="tab" aria-selected="true">Technical</button>
+            <button id="tabSoft" class="skills-tab" role="tab" aria-selected="false">Soft</button>
+          </div>
+        </div>
+
+        <div class="skills-controls">
+          <button id="skillsPrev" class="nav-btn" aria-label="Previous skill">◀</button>
+
+          <div class="skills-viewport" id="skillsViewport" tabindex="0" aria-hidden="false">
+
+            <div class="skills-track tech" id="techTrack" data-group="tech">
+              <div class="skill-card">
+                <h4>Python</h4>
+                <p>Basic programming, scripting, and automation projects.</p>
+              </div>
+              <div class="skill-card">
+                <h4>HTML &amp; CSS</h4>
+                <p>Building responsive pages and layouts.</p>
+              </div>
+              <div class="skill-card">
+                <h4>JavaScript</h4>
+                <p>Creating basic websites with interactive front-end behavior.</p>
+              </div>
+              <div class="skill-card">
+                <h4>Git &amp; GitHub</h4>
+                <p>Source control and deploying static sites via GitHub Pages.</p>
+              </div>
+            </div>
+
+            <div class="skills-track soft" id="softTrack" data-group="soft" aria-hidden="true" style="display:none;">
+              <div class="skill-card">
+                <h4>Communication</h4>
+                <p>Clear writing, reporting, and presenting ideas.</p>
+              </div>
+              <div class="skill-card">
+                <h4>Problem Solving</h4>
+                <p>Debugging and iterative improvement.</p>
+              </div>
+              <div class="skill-card">
+                <h4>Teamwork</h4>
+                <p>Collaborating effectively with peers and stakeholders.</p>
+              </div>
+            </div>
+          </div>
+
+          <button id="skillsNext" class="nav-btn" aria-label="Next skill">▶</button>
+        </div>
+      </section>
+
+      <section class="section projects-wrap" aria-labelledby="projectsHeading">
+        <h3 id="projectsHeading" class="section-title">My Projects</h3>
+
+        <div class="projects-controls">
+          <button id="projectsPrev" class="nav-btn" aria-label="Previous project">◀</button>
+
+          <div class="projects-viewport" id="projectsViewport" tabindex="0" aria-hidden="false">
+            <div class="projects-track" id="projectsTrack">
+              <div class="project-card">
+                <h4>Excel Automator</h4>
+                <p>Small automation that searches names in a database window and pastes results into Excel; includes a simple on-screen stop/continue button. (Python)</p>
+              </div>
+              <div class="project-card">
+                <h4>Pygame Platformer</h4>
+                <p>Fully functional 2D platformer built with Python &amp; Pygame.</p>
+              </div>
+              <div class="project-card">
+                <h4>Professional Website</h4>
+                <p>This interactive portfolio/website — built with HTML, CSS &amp; JavaScript and deployed via GitHub Pages.</p>
+              </div>
+            </div>
+          </div>
+
+          <button id="projectsNext" class="nav-btn" aria-label="Next project">▶</button>
+        </div>
+      </section>
+
+      <section class="section contacts-wrap">
+        <h3 class="section-title">Contact</h3>
+        <div class="about-card hoverable contact-card" id="contactCard" tabindex="0" aria-labelledby="contactTitle">
+          <h4 id="contactTitle" class="sr-only">Contact</h4>
+          <div class="contact-grid">
+            <div class="contact-item"><strong>Email:</strong> <a href="mailto:maniechomchuen3@gmail.com">maniechomchuen3@gmail.com</a></div>
+            <div class="contact-item"><strong>Phone:</strong> <a href="tel:+639649132145">+63 964 913 2145</a></div>
+            <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/Manie-Chomchuen" target="_blank" rel="noopener">Manie-Chomchuen</a></div>
+            <div class="contact-item"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/manie-chomchuen-b76169361/" target="_blank" rel="noopener">manie-chomchuen</a></div>
+            <div class="contact-item"><strong>Facebook:</strong> <a href="https://www.facebook.com/manie.chomchuen" target="_blank" rel="noopener">manie.chomchuen</a></div>
+          </div>
+          <p class="contact-note">Feel free to reach out for collaborations, questions, or project ideas.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Manie Q. Chomchuen</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
